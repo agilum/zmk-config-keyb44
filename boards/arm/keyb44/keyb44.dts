@@ -106,6 +106,12 @@
         };
     };
 
+    aliases {
+            // Point these aliases to the actual LED nodes defined in your hardware file
+            lower-layer-led = &lower_led;
+            raise-layer-led = &raise_led;
+    };
+
 
 	leds {
         compatible = "gpio-leds";
