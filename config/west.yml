@@ -16,9 +16,9 @@ manifest:
       remote: agilum 
       revision: main 
 
-    #- name: zmk-layer-leds
-      #remote: agilum
-      #revision: main         
+    - name: zmk-layer-leds
+      remote: agilum
+      revision: main         
 
          
     - name: zmk-poor-mans-led-indicator
