@@ -1,0 +1,23 @@
+identifier: keyb44
+name: Keyb44
+type: board
+arch: arm
+ram: 256
+flash: 1024
+toolchain:
+  - zephyr
+supported:
+  - adc
+  - backlight
+  - battery
+  - ble
+  - counter
+  - gpio
+  - i2c
+  - ieee802154
+  - kscan
+  - pwm
+  - reset
+  - usb_cdc_acm
+  - usb_device
+  - watchdog

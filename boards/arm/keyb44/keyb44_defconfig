@@ -1,0 +1,87 @@
+# SPDX-License-Identifier: MIT
+
+# --- ZEPHYR/NRF CORE (Minimal settings for the chip) ---
+CONFIG_SOC_SERIES_NRF52X=y
+CONFIG_SOC_NRF52840_QIAA=y
+CONFIG_BOARD_keyb44=y
+
+# Memory/System
+CONFIG_MPU_ALLOW_FLASH_WRITE=y
+CONFIG_NVS=y
+CONFIG_SETTINGS_NVS=y
+CONFIG_FLASH=y
+CONFIG_FLASH_PAGE_LAYOUT=y
+CONFIG_FLASH_MAP=y
+CONFIG_ARM_MPU=y
+
+# --- DRIVERS (REQUIRED FOR HARDWARE/WIDGET) ---
+CONFIG_PINCTRL=y
+CONFIG_GPIO=y
+CONFIG_I2C=y
+CONFIG_I2C_NRFX=y
+CONFIG_LED=y
+CONFIG_LED_PWM=y
+CONFIG_PWM=y
+CONFIG_MAX17048=y
+
+
+# Bootloader/UF2
+CONFIG_USE_DT_CODE_PARTITION=y
+CONFIG_BUILD_OUTPUT_UF2=y
+
+
+#--- ZMK settings
+
+CONFIG_ZMK_USB=y
+CONFIG_ZMK_USB_BOOT=y
+CONFIG_ZMK_BLE=y 
+
+# added by grok 
+CONFIG_ZMK_HID_INDICATORS=y
+#CONFIG_ZMK_CAPS_LOCK_LED=y
+#CONFIG_ZMK_LAYER_LEDS=y
+
+# Enable deep sleep
+CONFIG_ZMK_SLEEP=y
+
+# Enable LEDs by ebastlergithub
+CONFIG_LED_GPIO=y
+
+
+# Enable experimental BLE features to improve stability
+CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+
+# enable led backlight 
+CONFIG_ZMK_BACKLIGHT=y
+CONFIG_ZMK_BACKLIGHT_AUTO_OFF_IDLE=y
+CONFIG_ZMK_BACKLIGHT_ON_START=n
+CONFIG_ZMK_BACKLIGHT_BRT_STEP=3
+CONFIG_ZMK_BACKLIGHT_BRT_START=1  
+
+
+
+# enable zmk-poor-mans-led-indicator
+CONFIG_INDICATOR_LED_WIDGET=y
+CONFIG_INDICATOR_LED_SHOW_BLE=y
+CONFIG_INDICATOR_LED_SHOW_BATTERY_ON_BOOT=y
+##CONFIG_INDICATOR_LED_SHOW_CRITICAL_BATTERY_CHANGES=y
+##CONFIG_INDICATOR_LED_BATTERY_LEVEL_CRITICAL = 10
+
+
+
+
+# Turn on logging, and set ZMK logging to debug output
+CONFIG_LOG=y
+CONFIG_ZMK_USB_LOGGING=y  # Explicitly enable if the snippet doesn't suffice. typically handled by the zmk-usb-logging snippet
+CONFIG_USB_CDC_ACM=y
+CONFIG_ZMK_LOG_LEVEL_DBG=y
+CONFIG_PWM_LOG_LEVEL_DBG=y  # For PWM LED debugging
+CONFIG_LED_LOG_LEVEL_DBG=y  # For LED driver logs
+
+#CONFIG_LOG_MODE_IMMEDIATE=y (for real-time logging without buffering)
+##CONFIG_I2C_LOG_LEVEL_DBG=y  # For battery/I2C issues if relevant.Only needed for debugging issues with I2C devices
+##CONFIG_SENSOR_LOG_LEVEL_DBG=y  # For sensor-related logs.Only needed for debugging issues with sensors, like tilt sensors or rotary encoders
+##CONFIG_LOG_DEFAULT_LEVEL=4 #testing
+##CONFIG_LOG_IMMEDIATE=n #testing 
+##CONFIG_LOG_PROCESS_THREAD=y #testing
+##CONFIG_LOG_MODE_DEFERRED=y #tesing-Enables Asynchronous Mode. This enables the deferred (buffered) logging logic in the Zephyr kernel
