@@ -172,8 +172,8 @@ zephyr_udc0: &usbd {
             psels = <NRF_PSEL(PWM_OUT1, 1, 0)>; // P1.0 for capslock PWM
         };
         group3 { 
-            psels = <NRF_PSEL(PWM_OUT2, 0, 22)>;  // P0.22  Lower LED (channel 2)
-            psels = <NRF_PSEL(PWM_OUT3, 0, 5)>;  // P0.05  Raise LED (channel 3)
+            psels = <NRF_PSEL(PWM_OUT2, 0, 22)>,
+                    <NRF_PSEL(PWM_OUT3, 0, 5)>; // P0.05  Raise LED (channel 3) // P0.22  Lower LED (channel 2)
 
         };
     };
@@ -189,8 +189,8 @@ zephyr_udc0: &usbd {
         };
         group3 { 
 
-             psels = <NRF_PSEL(PWM_OUT2, 0, 22)>;  // P0.22  Lower LED (channel 2)
-             psels = <NRF_PSEL(PWM_OUT3, 0, 5)>;  // P0.05  Raise LED (channel 3)
+            psels = <NRF_PSEL(PWM_OUT2, 0, 22)>,
+                    <NRF_PSEL(PWM_OUT3, 0, 5)>; // P0.05  Raise LED (channel 3) // P0.22  Lower LED (channel 2)
              low-power-enable;
         };			            				            
      };
