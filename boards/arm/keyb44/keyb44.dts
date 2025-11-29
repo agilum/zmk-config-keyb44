@@ -84,33 +84,43 @@
         };
     };
 
-    aliases {
-        caps-lock-indicator-led = &caps_lock_led;   
-    };
-
 
 
             // Independent  Layers PWM LEDs 
-    layer_leds {
+
+    
+    aliases {
+        caps-lock-indicator-led = &caps_lock_led;
+        
+        // Layer LED aliases (The names your C code should use)
+        lower-layer-led = &lower_led;
+        raise-layer-led = &raise_led;
+        
+        // GPIO LED alias
+        indicator-led = &user_led;
+    };
+
+
+    layer_leds: layer_leds {
         compatible = "pwm-leds";
         status = "okay";
 
         lower_led: lower_led {
             label = "LOWER LED";
-            pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
+            // Check: Channel 2 (for PWM_OUT2)
+            pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
         };
 
         raise_led: raise_led {
             label = "RAISE LED";
-            pwms = <&pwm0 3 PWM_MSEC(20) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
+            // Check: Channel 3 (for PWM_OUT3)
+            pwms = <&pwm0 3 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
         };
     };
+    
 
-    aliases {
-            // Point these aliases to the actual LED nodes defined in your hardware file
-            lower-layer-led = &lower_led;
-            raise-layer-led = &raise_led;
-    };
+
+
 
 
 	leds {
@@ -128,9 +138,7 @@
        };
     };
 
-	aliases {
-        indicator-led = &user_led;
-    };	
+	
 };
 
 
