@@ -2,10 +2,13 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+      
     - name: agilum
       url-base: https://github.com/agilum 
+      
     - name: bluedrink9
       url-base: https://github.com/bluedrink9
+      
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,11 +19,11 @@ manifest:
       remote: agilum 
       revision: main 
 
-    - name: zmk-layer-leds
-      remote: agilum
-      revision: main         
-
-         
+    - name: layer-leds
+      url: https://github.com/agilum/zmk-layer-leds
+      revision: main
+      path: modules/layer_leds        
+       
     - name: zmk-poor-mans-led-indicator
       remote: bluedrink9
       revision: main
