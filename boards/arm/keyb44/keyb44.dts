@@ -89,7 +89,7 @@
     };
 
             // Independent  Layers PWM LEDs 
-    layer_leds {
+    layer_leds: layer_leds {
         compatible = "pwm-leds";
         status = "okay";
 
