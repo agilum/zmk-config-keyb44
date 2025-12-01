@@ -38,6 +38,9 @@ config PWM
 config LED_PWM
     default y
 
+confi LAYER_LEDS
+    default y
+
 
 
 endif # BOARD_keyb44
