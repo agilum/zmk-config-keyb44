@@ -38,7 +38,7 @@ config PWM
 config LED_PWM
     default y
 
-confi LAYER_LEDS
+config LAYER_LEDS
     default y
 
 
