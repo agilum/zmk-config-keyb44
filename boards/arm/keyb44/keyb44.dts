@@ -107,7 +107,7 @@
         };
     };
     
-      // zmk-poor-man-indicator  
+      // zmk-poor-man-indicator led 
  	leds {
         compatible = "gpio-leds";
 
