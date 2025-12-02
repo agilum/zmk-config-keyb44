@@ -74,7 +74,7 @@
         }; 
     };
 
-             // Independent Caps Lock PWM LED 
+        // Independent Caps Lock PWM LED 
     caps_leds: caps_pwm_leds {
         compatible = "pwm-leds";
         status = "okay";  
@@ -89,7 +89,7 @@
         caps-lock-indicator-led = &caps_lock_led;   
     };
 
-            // Independent  Layers PWM LEDs 
+        // Independent  Layers PWM LEDs 
     layer_leds: layer_leds {
         compatible = "pwm-leds";
         status = "okay";
@@ -107,8 +107,8 @@
         };
     };
     
-
-	leds {
+      // zmk-poor-man-indicator  
+ 	leds {
         compatible = "gpio-leds";
 
         /* not used for now but this usual blueled control
