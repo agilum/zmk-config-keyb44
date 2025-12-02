@@ -96,13 +96,13 @@
 
         lower_led: lower_led {
             label = "LOWER LED";
-            pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
+            pwms = <&pwm0 2 PWM_MSEC(10) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
             status = "okay";
         };
 
         raise_led: raise_led {
             label = "RAISE LED";
-            pwms = <&pwm0 3 PWM_MSEC(20) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
+            pwms = <&pwm0 3 PWM_MSEC(10) PWM_POLARITY_NORMAL>;  // Try INVERTED if LEDs don't light; adjust period if needed
             status = "okay";
         };
     };
