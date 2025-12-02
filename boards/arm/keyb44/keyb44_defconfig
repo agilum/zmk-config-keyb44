@@ -33,9 +33,9 @@ CONFIG_BUILD_OUTPUT_UF2=y
 #--- ZMK settings
 
 CONFIG_ZMK_USB=y
+CONFIG_ZMK_USB_SUSPEND_TIMEOUT=0  # This is timeout for a low-power suspend state for the USB interface
 CONFIG_ZMK_USB_BOOT=y
 CONFIG_ZMK_BLE=y 
-
 # needed for capslock led control 
 CONFIG_ZMK_HID_INDICATORS=y
 CONFIG_CAPS_LOCK_LED=y
