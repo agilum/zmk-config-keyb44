@@ -36,9 +36,11 @@ CONFIG_ZMK_USB=y
 CONFIG_ZMK_USB_BOOT=y
 CONFIG_ZMK_BLE=y 
 
-# added by grok 
+# needed for capslock led control 
 CONFIG_ZMK_HID_INDICATORS=y
 CONFIG_CAPS_LOCK_LED=y
+
+# layer leds control module 
 CONFIG_LAYER_LEDS=y
 
 # Enable deep sleep
