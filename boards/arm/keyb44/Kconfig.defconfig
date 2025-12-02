@@ -44,6 +44,8 @@ config LED_PWM
 config LAYER_LEDS
     default y
 
+config CAPS_LOCK_LED
+    default y
 
 
 endif # BOARD_keyb44
