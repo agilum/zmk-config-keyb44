@@ -30,7 +30,7 @@ CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_BUILD_OUTPUT_UF2=y
 
 
-#------ ZMK settings -----
+#------ ZMK settings ------
 
 CONFIG_ZMK_USB=y
 CONFIG_ZMK_USB_BOOT=y
