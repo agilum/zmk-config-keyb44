@@ -84,18 +84,12 @@ CONFIG_INDICATOR_LED_SHOW_LAYER_CHANGE=n
 
 
 
-# Turn on logging, and set ZMK logging to debug output
-CONFIG_LOG=y
-CONFIG_ZMK_USB_LOGGING=y  # Explicitly enable if the snippet doesn't suffice. typically handled by the zmk-usb-logging snippet
-CONFIG_USB_CDC_ACM=y
-CONFIG_ZMK_LOG_LEVEL_DBG=y
-CONFIG_PWM_LOG_LEVEL_DBG=y  # For PWM LED debugging
-CONFIG_LED_LOG_LEVEL_DBG=y  # For LED driver logs
+# Turn on all logging, and set ZMK logging to debug output
+# uncomment snippet in build.yml 
+#CONFIG_LOG=y
+#CONFIG_ZMK_USB_LOGGING=y  # Explicitly enable if the snippet doesn't suffice. typically handled by the zmk-usb-logging snippet
+#CONFIG_USB_CDC_ACM=y
+#CONFIG_ZMK_LOG_LEVEL_DBG=y
+#CONFIG_PWM_LOG_LEVEL_DBG=y  # For PWM LED debugging
+#CONFIG_LED_LOG_LEVEL_DBG=y  # For LED driver logs
 
-#CONFIG_LOG_MODE_IMMEDIATE=y (for real-time logging without buffering)
-##CONFIG_I2C_LOG_LEVEL_DBG=y  # For battery/I2C issues if relevant.Only needed for debugging issues with I2C devices
-##CONFIG_SENSOR_LOG_LEVEL_DBG=y  # For sensor-related logs.Only needed for debugging issues with sensors, like tilt sensors or rotary encoders
-##CONFIG_LOG_DEFAULT_LEVEL=4 #testing
-##CONFIG_LOG_IMMEDIATE=n #testing 
-##CONFIG_LOG_PROCESS_THREAD=y #testing
-##CONFIG_LOG_MODE_DEFERRED=y #tesing-Enables Asynchronous Mode. This enables the deferred (buffered) logging logic in the Zephyr kernel
